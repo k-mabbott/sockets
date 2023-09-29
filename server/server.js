@@ -7,8 +7,14 @@ const port = process.env.PORT;
     
 require("./config/mongoose.config");
     
-app.use(cors())
-app.use(express.json(), express.urlencoded({ extended: true }), cors());
+app.use(cors(
+    {
+        orgin: ["https://deploy-mern-1whq.vercel.app"],
+        medthods: ["POST", "GET"],
+        credentials: true
+    }
+));
+app.use(express.json(), express.urlencoded({ extended: true }));
     
 // const AllMyUserRoutes = require("./routes/user.routes");
 // AllMyUserRoutes(app);
