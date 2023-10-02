@@ -9,7 +9,7 @@ require("./config/mongoose.config");
     
 app.use(cors(
     {
-        orgin: ["https://deploy-mern-1whq.vercel.app"],
+        orgin: ["https://sockets-liard.vercel.app/"],
         medthods: ["POST", "GET"],
         credentials: true
     }
