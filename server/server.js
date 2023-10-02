@@ -11,7 +11,7 @@ app.use(cors(
     {
         orgin: ["https://sockets-liard.vercel.app/"],
         medthods: ["POST", "GET"],
-        credentials: true
+        credentials: true,
     }
 ));
 app.use(express.json(), express.urlencoded({ extended: true }));
