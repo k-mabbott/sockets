@@ -10,8 +10,16 @@ const Chat = () => {
     const [msgList, setMsgList] = useState(['hello', 'test'])
     // notice that we pass a callback function to initialize the socket
     // we don't need to destructure the 'setSocket' function since we won't be updating the socket state
-    const [socket] = useState(() => io(':8000'));
+    //const [socket] = useState(() => io(':8000'));
     
+    const connectionOptions = {
+        "force new connection": true,
+        "reconnectionAttempts": "Infinity",
+        "timeout": 10000,
+        "transports": ["websocket"]
+    };
+    
+    const socket = io.connect('https://sockets-api.vercel.app', connectionOptions);
 
 
 
