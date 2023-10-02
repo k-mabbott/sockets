@@ -52,3 +52,6 @@ io.on('connection', socket => {
         socket.broadcast.emit('send_data_to_all_other_clients', data)
     });
 });
+
+
+module.exports = app;
