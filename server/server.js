@@ -26,9 +26,9 @@ const server = app.listen(port, () => console.log(`Listening on port: ${port}`) 
 // and pass it our Express server
 const io = require('socket.io')(server, { cors: true });
 
-app.get( '/', (req,res) => {
-    res.json('Hello World')
-})
+// app.get( '/', (req,res) => {
+//     res.json('Hello World')
+// })
 app.get( '/api/test', (req,res) => {
     res.json('Hello')
 })
